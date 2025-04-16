@@ -1,0 +1,14 @@
+// package.json
+{
+    "dependencies": {
+      "react": "^19.0.0",
+      "react-dom": "^19.0.0",
+      "@visx/xychart": "^3.3.0",
+      "three": "^0.163.0",
+      "@react-three/fiber": "^9.2.6",
+      "@react-three/drei": "^10.4.2",
+      "@mui/material": "^5.16.4",
+      "@emotion/react": "^11.11.4"
+    }
+  }
+  

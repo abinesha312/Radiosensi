@@ -1,0 +1,36 @@
+# Core dependencies
+torch==2.3.0
+torchvision==0.18.0
+numpy==1.26.4
+pandas==2.2.2
+matplotlib==3.8.3
+scikit-learn==1.4.2
+tqdm==4.66.2
+
+# Data handling
+kaggle==1.6.11
+pydicom==3.0.0
+opencv-python==4.9.0.80
+
+# Visualization
+seaborn==0.13.2
+plotly==5.19.0
+
+# Database
+psycopg2-binary==2.9.9
+SQLAlchemy==2.0.27
+
+# Web server
+flask==3.0.2
+flask-cors==4.0.1
+requests==2.32.3
+
+# Utilities
+python-dotenv==1.0.1
+pyyaml==6.0.1
+
+# Distributed training
+mpi4py==3.1.5
+torch==2.3.0+cu121
+torchvision==0.18.0+cu121
+torchaudio==2.3.0

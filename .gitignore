@@ -1,0 +1,14 @@
+#remove .env
+.env
+
+# remove all files in data/processed
+/data
+
+#remove radiovenv
+radiovenv/
+
+#remove all files in checkpoints
+checkpoints/
+
+
+

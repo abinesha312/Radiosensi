@@ -1,0 +1,36 @@
+# docker-compose-distributed.yml
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_PASSWORD: rad123
+      POSTGRES_DB: radiotherapy
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  train-node1:
+    build: .
+    runtime: nvidia
+    environment:
+      - MASTER_ADDR=train-node1
+      - MASTER_PORT=29400
+      - WORLD_SIZE=8
+      - RANK=0
+    command: bash -c "cd distributed_train && ./launch.sh"
+
+  train-node2:
+    build: .
+    runtime: nvidia  
+    environment:
+      - MASTER_ADDR=train-node1
+      - MASTER_PORT=29400
+      - WORLD_SIZE=8
+      - RANK=1
+    command: bash -c "cd distributed_train && ./launch.sh"
+
+volumes:
+  pgdata:

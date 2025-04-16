@@ -1,0 +1,16 @@
+# distributed_train/cluster_config.yaml
+nodes:
+  - name: node1
+    ip: 192.168.1.10
+    gpus: 4
+  - name: node2
+    ip: 192.168.1.11
+    gpus: 4
+storage:
+  nfs_server: 192.168.1.100:/datasets
+training:
+  total_epochs: 100
+  batch_per_gpu: 64
+  communication:
+    backend: nccl
+    port: 29400
